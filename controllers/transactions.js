@@ -38,7 +38,7 @@ router.get('/:transactionId', async (req, res) => {
 
 router.put('/:transactionId', async (req, res) => {
     try {
-        const transaction = await Transaction.findById(req.params.transactionId);
+        const transaction = await Transaction.findById(req.params.transactionId)
 
         // Update
         const updatedTransaction = await Transaction.findByIdAndUpdate(
