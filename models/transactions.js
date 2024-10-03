@@ -11,7 +11,8 @@ const itemSchema = new mongoose.Schema(
             required: true
         },
         buyers: [{
-            type: String
+            type: String,
+            required: true
         }]
     }
 );
