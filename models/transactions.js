@@ -19,6 +19,14 @@ const itemSchema = new mongoose.Schema(
 
 const transactionSchema = new mongoose.Schema(
     {
+        tag: {
+            type: String,
+            required: true
+        },
+        people: {
+            type: Number,
+            required: true
+        },
         items: [itemSchema],
         owner: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
     },
